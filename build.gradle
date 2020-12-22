@@ -95,15 +95,15 @@ apiValidation {
 }
 
 apply plugin: 'base'
-apply plugin: 'kotlinx-knit'
-
-knit {
-    siteRoot = "https://kotlin.github.io/kotlinx.serialization"
-    moduleDocs = "build/dokka/htmlMultiModule"
-}
+//apply plugin: 'kotlinx-knit'
+//
+//knit {
+//    siteRoot = "https://kotlin.github.io/kotlinx.serialization"
+//    moduleDocs = "build/dokka/htmlMultiModule"
+//}
 
 // Build API docs for all modules with dokka before running Knit
-knitPrepare.dependsOn "dokka"
+//knitPrepare.dependsOn "dokka"
 
 allprojects {
     group 'org.jetbrains.kotlinx'
@@ -170,4 +170,4 @@ subprojects {
 }
 
 apply from: rootProject.file('gradle/compiler-version.gradle')
-apply from: rootProject.file("gradle/dokka.gradle")
+// apply from: rootProject.file("gradle/dokka.gradle")
